@@ -1,0 +1,37 @@
+package javaproject;
+import java.util.Scanner;
+class car
+{
+	String thismake;
+	String thismodel;
+	int thisyear;
+	void function(String make,String model,int year)
+	{
+		thismake=make;
+		thismodel=model;
+		thisyear=year;
+	}
+	void data()
+	{
+		System.out.println( thismake+ " "+thismodel + ""+thisyear);
+	}
+}
+public class task2
+{
+	public static void main(String args[])
+	{
+		String make;
+		String model;
+		int year;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("enter a made place: ");
+	    make=scan.nextLine();
+		System.out.println("enter a model:");
+		model=scan.nextLine();
+		System.out.println("enter a year:");
+		year=scan.nextInt();
+		car type=new car();
+		type.function(make,model,year);
+		type.data();
+	}
+}
